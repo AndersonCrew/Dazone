@@ -3,6 +3,14 @@
 *.ap_
 *.aab
 
+# Flutter / Dart generated
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+.pub-cache/
+
 # Files for the ART/Dalvik VM
 *.dex
 
