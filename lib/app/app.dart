@@ -1,7 +1,10 @@
+import 'package:dazone/app/router/generate_route_mixin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-class Dazone extends StatelessWidget {
+class Dazone extends StatelessWidget with GenerateRouteMixin {
+  const Dazone({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,11 +19,7 @@ class Dazone extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      home: const Scaffold(
-        body: Center(
-          child: Text("Dazone Base"),
-        ),
-      ),
+      onGenerateRoute: onGenerateRoute,
     );
   }
 }
